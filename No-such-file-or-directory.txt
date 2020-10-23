@@ -6,6 +6,8 @@ Warning: Task "exec:boutique" failed. Use --force to continue.
 
 Aborted due to warnings.
 
+SEE SCREEN:
+http://prntscr.com/v4zait
 
 FIXED: Run command:
 composer dump-autoload
