@@ -1,0 +1,11 @@
+ERROR: 
+Warning: include(/home/wp2cart/public_html/boutique/vendor/composer/../../genera                                                                                                             ted/code/Magento/Framework/App/ResourceConnection/Proxy.php): failed to open str                                                                                                             eam: No such file or directory in /home/wp2cart/public_html/boutique/vendor/comp                                                                                                             oser/ClassLoader.php on line 444
+>> Exited with code: 1.
+>> Error executing child process: Error: Process exited with code 1.
+Warning: Task "exec:boutique" failed. Use --force to continue.
+
+Aborted due to warnings.
+
+
+FIXED: Run command:
+composer dump-autoload
