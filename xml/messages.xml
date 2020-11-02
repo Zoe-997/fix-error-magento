@@ -1,0 +1,4 @@
+<move element="messages" destination="page.wrapper" before="-"/>
+<move element="ajax.message.placeholder" destination="page.wrapper" before="-"/>
+<referenceBlock class="Magento\Framework\View\Element\Template" name="ajax.message.placeholder" template="Magento_Theme::html/messages.phtml"/>
+<referenceBlock class="Magento\Framework\View\Element\Messages" name="messages" as="messages" template="Magento_Theme::messages.phtml"/>

@@ -1,0 +1,20 @@
+product name: <move element="page.main.title" destination="product.content.boxoptions" before="-"/>
+
+product review: <move element="product.info.review" destination="product.content.boxoptions" after="page.main.title"/>
+
+product sku: <move element="product.info.sku" destination="product.content.boxoptions" after="product.info.review" />
+        
+product description: <move element="product.info.overview" destination="product.content.boxoptions" after="product.info.sku"/>
+
+guide size: <move element="sizeguide" destination="product.content.boxoptions" after="-"/>
+id:size_guide
+name:size guide
+
+
+product options: <move element="product.info.options.swatches" destination="product.content.boxoptions" after="-"/>
+
+product-price: <container name="product.info.price" label="Product info auxiliary container" htmlTag="div" htmlClass="product-info-price"></container>
+
+product add-to-cart:
+
+product add-to:

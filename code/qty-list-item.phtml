@@ -1,0 +1,17 @@
+<div class="product-qty-update">
+    <div class="product-qty">
+        <div class="control custom-qty">
+            <div class="btn-plus">
+                <button type="button" class="reduced items" onclick="var result = document.getElementById('qty<?php echo $_product->getId()?>'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) result.value--;;return false;">
+                    <i class="fa ion-minus"></i>
+                </button>
+            </div>
+            <input type="number" name="qty" id="qty<?php echo $_product->getId()?>" maxlength="12" value="1" title="" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:20}}">
+            <div class="btn-plus">
+                <button type="button" class="increase items" onclick="var result = document.getElementById('qty<?php echo $_product->getId()?>'); var qty = result.value; if( !isNaN( qty )) result.value++; return false;">
+                    <i class="fa ion-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

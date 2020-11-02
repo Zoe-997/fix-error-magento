@@ -1,0 +1,34 @@
+step 1:
+	npm install -g grunt-cli
+
+step 2: in file magento (example: /home/wp2cart/web/wp2cart.com/public_html/biolife):
+	package.json.sample đến package.json
+	Gruntfile.js.sample đến Gruntfile.js
+	grunt-config.json.sample vào grunt-config.json
+
+step 3: 
+	cd <your_Magento_instance_directory> (example: /home/wp2cart/web/wp2cart.com/public_html/biolife)
+	npm install
+	npm update
+
+step 4: in dev/tools/grunt/configs/local-themes.js add theme after:
+	<theme>: {
+	area: '<area>',
+	name: '<Vendor>/<theme>',
+	locale: '<language>',
+	files: [
+	'<path_to_file1>', //path to root source file
+	'<path_to_file2>'
+	],
+	dsl: 'less'
+	}
+
+<Vendor>: Tên nhà cung cấp.
+
+<theme>: mã chủ đề của bạn, theo quy ước nên tương ứng với tên thư mục chủ đề.
+
+<language>: được chỉ định trong code_subtag định dạng, ví dụ en_US. Chỉ có một địa điểm có thể được chỉ định ở đây. Để gỡ lỗi chủ đề với một miền địa phương khác, hãy tạo thêm một khai báo chủ đề, đã chỉ định một giá trị khác cho language.
+
+<area>: mã vùng, có thể là frontend hoặc adminhtml.
+
+<path_to_file>: đường dẫn đến tệp nguồn gốc, liên quan đến thư mục app/design/frontend/<Vendor>/<theme>/web. Bạn cần chỉ định tất cả các tệp nguồn gốc của chủ đề . Nếu chủ đề của bạn kế thừa từ một chủ đề nhất định và không chứa các tệp nguồn gốc của chính nó, hãy chỉ định các tệp nguồn gốc của chủ đề gốc.

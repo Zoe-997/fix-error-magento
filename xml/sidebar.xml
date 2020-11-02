@@ -1,0 +1,8 @@
+<referenceContainer name="sidebar.additional">  
+	<referenceBlock name="wishlist_sidebar" remove="true"/>
+	<referenceBlock name="sale.reorder.sidebar" remove="true"/>
+	<referenceBlock name="catalog.compare.sidebar" remove="true"/>
+</referenceContainer>
+<referenceContainer name="div.sidebar.main">
+	<block class="Magiccart\Magicmenu\Block\Menu" name="accordion.sidebar" before="-" template="accordion.phtml" />
+</referenceContainer>

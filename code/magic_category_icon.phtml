@@ -1,0 +1,14 @@
+<?php $activated = $this->getTabActivated();
+$limit = $this->getLimit();
+$single = ($numTabs ==1) ? 'single' : '';
+foreach ($tabs as $type => $name):
+	$status  = (!$this->getAjax() || $activated ==$type) ? 'loaded' : '';
+	$status .= ($type == $activated) ? " activated $single" : '';
+	/* @escapeNotVerified */ 
+	echo '<li class="item '.$status.'" data-type ="'.$type.'">
+	<img class="img_main" src="../pub/media/catalog/category/'.__($name).'.jpg" alt="'.__($name).'">
+	<img class="img_hover" src="../pub/media/catalog/category/'.__($name).'_h.jpg" alt="'.__($name).'">
+	<span class ="title">'.__($name).'</span>
+	</li>';
+endforeach;
+?>

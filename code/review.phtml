@@ -1,0 +1,24 @@
+rating: revies.tab
+
+
+<!-- show rating if product doesn't review -->
+<?php
+$review_html = $block->getReviewsSummaryHtml($_product, $templateType);
+if($review_html): 
+echo $review_html;
+else: 
+?>
+<div class="product-reviews-summary short">
+    <div class="rating-summary">
+        <span
+        class="label"><span><?php /* @escapeNotVerified */ echo __('Rating:') ?></span></span></span>
+        <div class="rating-result" title="0%">
+            <span style="width:0%"><span>0%</span></span>
+        </div>
+    </div>
+</div>
+
+<?php endif; ?>
+
+<!-- only show rating if product have review -->
+<?php echo $block->getReviewsSummaryHtml($_product, $templateType); ?>

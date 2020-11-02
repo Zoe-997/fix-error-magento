@@ -1,0 +1,10 @@
+<!-- /home/wp2cart/public_html/alothemes/app/design/frontend/Alothemes/alo/Magento_Theme/templates/html/title.phtml -->
+
+<p class="description">
+	<?php
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+	$_page_config = $objectManager->get('Magento\Framework\View\Page\Config');
+	$_meta_description = strip_tags($_page_config->getDescription());
+	?>
+	<?php echo $_meta_description ?>
+</p>

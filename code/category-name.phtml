@@ -1,0 +1,18 @@
+<!-- 1 -->
+<?php
+$first_category_name = $_aloHelper->getFirstCategory($_product);
+if ($first_category_name) :
+	?>
+	<h3 class="category_name"><?php echo $first_category_name; ?></h3>
+	<?php
+endif;
+?>
+
+
+<!-- 2 -->
+<?php 
+$categoryIds = $_product->getCategoryIds();
+$categoryId  = count($categoryIds) ? current($categoryIds) : 0;
+$category    = $categoryId ? $this->getCategory($categoryId) : '';
+echo $category ? '<h3 class="category_name"><a href="' . $category->getUrl() . '">' . $category->getName() . '</a></h3>' : '';
+?>
